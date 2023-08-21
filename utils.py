@@ -1,6 +1,7 @@
 import logging
 
-localhost = ("192.168.1.215", 10992)
+localhost = ("192.168.1.215", 11592)
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("server log")
@@ -9,6 +10,7 @@ handler.setLevel(logging.DEBUG)
 formatter = logging.Formatter("%(levelname)s - %(asctime)s: %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
+
 
 def working(function):
     def wrapper(*args, **kwargs):
